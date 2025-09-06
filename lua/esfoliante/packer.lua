@@ -4,7 +4,7 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
-    use { 
+    use {
         'olivercederborg/poimandres.nvim',
         config = function()
         require('poimandres').setup {
@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
 		requires = {
-			{'williamboman/mason.nvim'},
+            {'williamboman/mason.nvim'},
 			{'williamboman/mason-lspconfig.nvim'},
 
 			-- LSP Support
@@ -62,4 +62,35 @@ return require('packer').startup(function(use)
 	use "Djancyp/better-comments.nvim"
 
 	use "lukas-reineke/indent-blankline.nvim"
+
+    use {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        config = function()
+            require("copilot").setup({})
+        end,
+    }
+
+    require('packer').use { 'mhartington/formatter.nvim' }
+
+    use {
+        'Theo-Steiner/warped.nvim',
+        require = {'tjdevries/colorbuddy.nvim'},
+        config = function()
+            require('warped').setup()
+        end
+    }
+
+    use 'shaunsingh/nord.nvim'
+    use ({ 'projekt0n/github-nvim-theme' })
+    use("mellow-theme/mellow.nvim")
+    use("felipeagc/fleet-theme-nvim")
+
+    use({
+        "panghu-huang/theme-picker.nvim",
+        requires = {
+            "nvim-telescope/telescope.nvim", -- dependency
+        },
+    })
 end)
