@@ -23,3 +23,6 @@ vim.keymap.set('v', '<leader>f', '<cmd>:Format<CR>', { noremap = true, silent = 
 vim.keymap.set('v', '<leader>wf', '<cmd>:FormatWrite<CR>', { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap('n', '<leader>tp', ':lua require("theme-picker").open_theme_picker()<CR>', { noremap = true, silent = true })
+
+-- Markdown previewer
+vim.api.nvim_set_keymap('n', '<leader>mp', '<cmd>:MarkdownPreview<CR>', { noremap = true, silent = true })
