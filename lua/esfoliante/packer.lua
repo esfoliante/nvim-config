@@ -98,4 +98,20 @@ return require('packer').startup(function(use)
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
+
+    use { 
+        'justinhj/battery.nvim', 
+        requires = {
+            {'nvim-tree/nvim-web-devicons'}, 
+            {'nvim-lua/plenary.nvim'}
+        }
+    }
+
+    use({
+        "kdheepak/lazygit.nvim",
+        -- optional for floating window border decoration
+        requires = {
+            "nvim-lua/plenary.nvim",
+        },
+    })
 end)

@@ -8,7 +8,7 @@ vim.api.nvim_set_keymap('n', '<leader>to', '<cmd>:NvimTreeToggle<CR>', { noremap
 vim.api.nvim_set_keymap("n", "<leader>tt", '<cmd>:ToggleTerm size=40 start_in_insert=true dir=~/dev direction=float<CR>', { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap('n', '<leader>sv', '<cmd>:vsplit<CR>', {noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>sh', '<cmd>:hsplit<CR>', {noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>sh', '<cmd>:split<CR>', {noremap = true, silent = true })
 
 -- Word motions
 vim.keymap.set({"n", "v"}, "<M-Right>", "e", { noremap = true })
@@ -26,3 +26,6 @@ vim.api.nvim_set_keymap('n', '<leader>tp', ':lua require("theme-picker").open_th
 
 -- Markdown previewer
 vim.api.nvim_set_keymap('n', '<leader>mp', '<cmd>:MarkdownPreview<CR>', { noremap = true, silent = true })
+
+-- Lazygit
+vim.api.nvim_set_keymap('n', '<leader>lg', '<cmd>:LazyGit<CR>', { noremap = true, silent = true })
